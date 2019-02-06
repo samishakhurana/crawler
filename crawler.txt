@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>   
+#include<string.h>   
+#include<ctype.h>  
+void checkdept(char *ar                          /* gcc crawler.c ,  ./a.out www.chitkara.edu.in 2 \java  */ 
+int main(int argc,char*argv[])                       
+{
+  int i=0,dept=0;
+   char str[100];
+ if(argc>4)
+ exit(1);
+ else
+  {
+   for(i=1;i<4;i++)
+   printf("%s ",argv[i]);
+  }
+  strcpy(str,argv[2]);
+  i=0;
+  while(str[i]!='\0')
+  {
+    int p=0;
+    p = str[i]-'0';
+   if(!(p>=0&&p<=9))
+    exit(1);
+  dept =dept*10+p;
+  i++;
+  }
+  if(dept>2)
+  exit(1);
+  printf("\nworking");
+}
